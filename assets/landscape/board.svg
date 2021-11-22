@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 400" >
+<style>
+    .iso{
+        transform-style: preserve-3d;
+        
+    }
+    .field{
+        fill: hsl(80deg,40%,50%);
+    }
+    
+</style>
+<rect transform="skewX(60)" class="iso, field" x="0" y="0" width="50%" height="25%" />
+<path transform="skewX(60) skewY(-30)" d="M0 0 C -10 5, -10 15, 0 20 C-40 20, -40 35, 0 40 C -180 50,-180 90,0 100"
+     fill="none" stroke="magenta" stroke-width="2" stoke-linecap="round"/> 
+<path transform="skewX(60) " d="M0 100 L-12 110 L10 100 L-60 150 L30 100"
+     fill="none" stroke="magenta" stroke-width="1" stoke-linecap="round"/> 
+</svg>

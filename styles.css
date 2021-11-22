@@ -1,0 +1,55 @@
+body {
+  background-color: hsla(80deg, 100%, 50%, 25%);
+}
+
+#line {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+#surface {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+#bird_1 {
+  width: 40%;
+  z-index: 0;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  transition: left 0.5s ease-in, top 0.5s ease-in;
+}
+
+#board {
+  /* margin-top: 30%; */
+  width: 105%;
+  position: absolute;
+  left: 1%;
+  top: 50%;
+  z-index: -100;
+  pointer-events: auto;
+}
+
+.controls {
+  bottom: 20%;
+  color: magenta;
+}
+
+.container {
+  margin: 10vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+}
+
+/* user-select: none; */
+
+/* #element {
+  touch-action: pan-right pinch-zoom;
+} */

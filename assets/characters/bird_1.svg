@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" >
+  <defs>
+    <style>
+      .beak {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 0.5px;
+      }
+      .body{
+        fill:magenta;
+      }
+      .feather{
+        fill:none;
+        stroke: cyan;
+        stroke-width: 1px;
+      }
+    </style>
+    <filter id="dropshadow">
+      <feGaussianBlur in="SourceAlpha" result="blurOut" stdDeviation="2"/>
+      <feOffset in="blurOut" result="dropBlur" dx="2" dy="1"/>
+
+      <feComposite operator="over" in="SourceGraphic" in2="dropBlur" result="final"/>
+    </filter>
+
+
+    <filter id="texture">
+    
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise"/>
+
+      <feDiffuseLighting in="noise" lighting-color="white" surfaceScale="2" result="diffLight">
+
+      <feDistantLight azimuth="45" elevation="35"/>
+
+      </feDiffuseLighting>
+    </filter>
+
+    <filter id="mark_texture">
+    <feImage xlink:href="./textures/fill.png"  result="texture" 
+   width="100%" height="100%"
+         preserveAspectRatio="none"
+    />
+    <!-- <feComposite in="texture" in2="SourceGraphic"
+      operator="in" result="cropped_texture" />
+    <feBlend  in2="SourceGraphic" in="cropped_texture" mode="multiply"/> -->
+    <!-- <feColorMatrix in="texture"
+      type="saturate"
+      values="0" result="IMAGE"/> -->
+      <feGaussianBlur in="texture" stdDeviation="0.1" result="MAP"/>
+
+    <feDisplacementMap
+      in="SourceGraphic" in2="MAP"
+      scale="7" xChannelSelector="B" yChannelSelector="B" 
+      result="TEXTURED"
+    />
+    <feGaussianBlur in="Textured" result="blurOut" stdDeviation=".1"/>
+      
+      <!-- <feFlood in="SourceGraphic" flood-color="cyan" flood-opacity="20%" result="blurOut"/> -->
+      <!-- <feComposite operator="over" in="SourceGraphic" in2="blurOut" result="final"/> -->
+
+    <!-- <feComposite in="TEXTURED" in2="SourceGraphic"
+      operator="in" result="cropped_texture" /> -->
+    </filter>
+  
+  </defs>
+  <!-- <circle cx="100" cy="100" r="50" style="fill:red" filter="url(#mark_texture)"/> -->
+  <g id="body">
+    <path class="body" filter="url(#mark_texture)" d="M494.5,665.5s-4.6-48.91,14-83c10.5-19.25,21-28.55,26.81-30.57a6.75,6.75,0,0,1,2.19-.43c5,0,17,1,20,26s-5,90-6,90h-16s5-41,5-49,1.83-29.53,2-34c.49-12.88-10.36-16.41-18-3-3.17,5.56-15.57,30.25-18,69,0,10,2,15,2,15Z" transform="translate(-479 -489.99)"/>
+  </g>
+  <g id="feathers">
+    <path class="feather" d="M534.5,607.5a48.89,48.89,0,0,1,1,6c.37,7.62,3,16,4-3" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M555.5,617.5l3,11s2,5,3-1a9,9,0,0,0-4-9" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M552.5,630.5l6,14s2,5,3,5-6-21-7-24" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M542.5,617.5s3,15,6,18-2-17-2-19" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M547.5,644.5s1,17,0,19-5-4-5-17" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M495.5,612.5l-2,2s-8,11-7,12,2,1,4,0,4-7,4-7,2-3,4-3" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M495.5,625.5s-13,12-15,17-1,3-1,3,10-6,10-7,9-10,11-11" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M495.5,632.5s-10,9-10,11-4,6-4,7-2,3,1,2,9-10,12-13,4-5,6-6" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M495.5,642.5a27.36,27.36,0,0,0-4,5c-1,2-5,7-5,9s-2,5-2,5,0,2,2,0,8-11,9-13,4-7,4-7" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M496.5,652.5c0,1-3,5-4,7a14.86,14.86,0,0,0-1,6,20.34,20.34,0,0,0,1,5s4,0,6-9" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M553.5,644.5s5,15,8,15-6-23-8-24" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M555.5,652.5l5,14a36.41,36.41,0,0,1-9-12" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M501.5,651.5s5,10,9,12,2-1,2-1-5-18-7-20" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M503.5,634.5s8,24,10,23-3-19-6-21" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M505.5,611.5s2,13,2,14,1,0,2-2,2-10,1-12" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M512.5,607.5s1,14,2,14,2-9,3-13,3-5,3-5" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M524.5,607.5s0,11,1,12,2-11,2-14" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M528.5,614.5s-1,15,2,15-1-15,0-17" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M534.5,623.5s-8,17-4,19,5-8,5-8,2-7,6-9" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M534.5,641.5s-1.12,21,3,21c1,0,1-13,2-21" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M530.5,655.5s4,7,5,8,1-10,0-12" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M532.5,648.5s-6,12-6,14-1,2-1,2l-1-14" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M525.5,628.5s-1,11,0,13-1,12-2,13-3-25-3-25v-4" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M515.5,609.5c0,1,0,25,1,25s7-19,7-24" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M509.5,621.5a62.71,62.71,0,0,1,4,15,57.57,57.57,0,0,0,3,13v3l-5-9s-4-13-5-15" transform="translate(-479 -489.99)"/>
+    <path class="feather" d="M519.5,638.5l-1,16v4a18.93,18.93,0,0,1-4-6" transform="translate(-479 -489.99)"/>
+  </g>
+  <g id="beak">
+    <path class="beak" d="M536.5,551.5s2-14,3-18,6-25,7-28l5-15c1-3-2,21-1,24s-2,19-1,21,1,7,1,9-1,12-1,15" transform="translate(-479 -489.99)"/>
+  </g>
+
+</svg>

@@ -1,0 +1,21 @@
+{
+  "name": "inch_worm_habitat",
+  "version": "1.0.0",
+  "description": "game prototype",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
+    "start": "npm run lite"
+  },
+  "keywords": [
+    "rainbow"
+  ],
+  "author": "Charlie Best & Andrew Oesch",
+  "license": "LGPL-2.0",
+  "dependencies": {
+    "lite-server": "^2.6.1",
+    "ssh2-sftp-client": "^7.1.0",
+    "tone": "^14.7.77"
+  }
+}
