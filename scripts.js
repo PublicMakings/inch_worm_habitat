@@ -32,7 +32,8 @@ function move(e) {
   console.log(x, y);
   bird.style.left = x + "px";
   bird.style.top = y + "px";
-  click_sound();
+  // // UNCOMMENT EVENTUALLY
+  // click_sound();
 }
 
 let music_btn = document.createElement("button");
@@ -70,6 +71,8 @@ function toggle(e) {
   }
 }
 // first touch allow audio on mobile... figure out how to destory this afterwards?
+
+// /// uncomment!
 document.body.addEventListener("touchstart", allow_audio, false);
 
 function allow_audio(e) {

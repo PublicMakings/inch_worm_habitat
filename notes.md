@@ -9,3 +9,8 @@
 [https://facebook.us7.list-manage.com/subscribe?u=fb5b37b4b43bb1dda6dbb0522&id=78a16c691c]
 
 [https://talkingantiques.co.uk/sellers/j-miller-sons-antiques/]
+
+## FONTS
+
+- [tools for making fonts](https://www.arcstone.com/blog/the-6-best-sites-for-creating-your-own-font)
+- [Make fonts in illustrator](https://makeitcenter.adobe.com/en/blog/how-to-make-your-own-font.html)
